@@ -91,7 +91,7 @@ def make_seq(wrong_arr, no, status):
 
     df.at[no+1, 'test_seq'] = str(result_array)
 
-    df.to_csv('seq_ques.csv', index=False)
+    df.to_csv('data/seq_ques.csv', index=False)
     return 1
 
 
