@@ -109,7 +109,6 @@ def calculate_score_wrong_answer():
 if st.session_state.question_index < 30:
     user_answer_index, correct_answer_ind = show_question()
 
-    df.to_csv('question_seq.csv', index=False)
     if st.button("Next"):
         st.session_state.answers.append(user_answer_index)
         st.session_state.correct_answers.append(correct_answer_ind)
