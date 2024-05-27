@@ -5,8 +5,8 @@ import random
 import numpy as np
 
 
-df = pd.read_csv('words.csv')
-df2 = pd.read_csv('seq_ques.csv')
+df = pd.read_csv('data/words.csv')
+df2 = pd.read_csv('data/seq_ques.csv')
 
 
 test_no = 0
@@ -51,8 +51,8 @@ def show_question():
 
 def make_seq(wrong_arr, no, status):
 
-    df = pd.read_csv('seq_ques.csv')
-    df1 = pd.read_csv('words.csv')
+    df = pd.read_csv('data/seq_ques.csv')
+    df1 = pd.read_csv('data/words.csv')
 
     df.at[no, 'wrong_word'] = str(wrong_arr)
     df.at[no, 'status'] = status
