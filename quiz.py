@@ -9,19 +9,18 @@ df = pd.read_csv('data/words.csv')
 df2 = pd.read_csv('data/seq_ques.csv')
 
 
-test_no = 0
-while df2['status'].iloc[test_no] != "None":
-    test_no += 1
+# test_no = 0
+# while df2['status'].iloc[test_no] != "None":
+#     test_no += 1
 
 
-test_no += 1
+# test_no += 1
 
 # Initialize session state variables
 if 'question_index' not in st.session_state:
     st.session_state.question_index = 0
     st.session_state.answers = []
-    st.session_state.random_numbers = ast.literal_eval(
-        df2['test_seq'].iloc[test_no-1])
+    st.session_state.random_numbers = [14, 150, 54, 43, 38, 102, 16, 106, 39, 17, 154, 137, 14, 146, 38, 123, 20, 59, 153, 57, 104, 16, 90, 50, 42, 84, 123, 7, 32, 154]
     st.session_state.answer_index = 0
     st.session_state.correct_answers = []
     st.session_state.sentence_seq = []
