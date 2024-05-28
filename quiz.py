@@ -20,7 +20,7 @@ df2 = pd.read_csv('data/seq_ques.csv')
 if 'question_index' not in st.session_state:
     st.session_state.question_index = 0
     st.session_state.answers = []
-    st.session_state.random_numbers = [random.randint(0, len(df[words]) - 1) for _ in range(30)]
+    st.session_state.random_numbers = [random.randint(0, len(df['word']) - 1) for _ in range(30)]
     st.session_state.answer_index = 0
     st.session_state.correct_answers = []
     st.session_state.sentence_seq = []
